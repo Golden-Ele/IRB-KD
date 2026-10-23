@@ -1,0 +1,2 @@
+include README.md LICENSE NOTICE requirements.txt hyp.yaml
+recursive-include ultralytics *.yaml *.yml *.sh *.jpg

@@ -1,0 +1,9 @@
+# TEMPLATE ONLY: not an archived or measured experimental configuration.
+# The authors must supply the actual dataset root, split definitions, and complete
+# ordered class mapping before using this file. Empty fields are intentional.
+# No self-captured images, annotations, or real filenames are included.
+path: self_captured  # placeholder relative to the configured datasets_dir
+train: null  # author must fill: training image directory or image-list file
+val: null  # author must fill: actual validation definition, if one existed
+test: null  # author must fill: actual evaluation definition
+names: {}  # author must fill: complete zero-based class-ID-to-name mapping

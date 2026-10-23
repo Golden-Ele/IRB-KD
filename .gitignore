@@ -1,0 +1,55 @@
+# Local datasets, experiment outputs, and private review materials
+/dataset/
+/datasets/
+/runs/
+/reviewer_materials/
+/weights/
+/checkpoints/
+
+# Trained models and exported artifacts
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.engine
+*.tflite
+*.mlmodel
+*.mlpackage/
+
+# Python environments and generated files
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.cache
+*.log
+
+# Editor and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*~
+
+# Local credentials and service configuration
+.env
+.env.*
+!.env.example
+.aws/
+.codex/
+.agents/
+credentials*.json
+*service-account*.json
+*.pem
+*.key
+
+# Keep dataset/model YAML templates and bundled upstream sample assets tracked.
