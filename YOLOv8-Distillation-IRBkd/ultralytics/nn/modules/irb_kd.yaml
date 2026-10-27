@@ -1,0 +1,26 @@
+# Distillation settings; detector hyperparameters use --cfg hyp.yaml.
+feature_distiller: irb-feature  # null disables Interaction
+logic_distiller: irb-logit      # null disables Reshuffling and Boundary
+feature_layers:               # backbone P2/P3/P4/P5, strides 4/8/16/32
+  - model.2.cv2
+  - model.4.cv2
+  - model.6.cv2
+  - model.8.cv2
+
+# Weights must be nonnegative numbers; zero excludes a term from the total.
+alpha: 0.00004
+beta: 0.8
+gamma: 0.00006
+relation_temperature: 0.5
+boundary_temperature: 0.4
+boundary_criterion: w1  # w1 or kl
+rho_top: 0.2
+rho_tail: 0.2
+
+roi_size: 7                 # P x P RoIAlign, aligned=False, sampling_ratio=-1
+embed_dim: 128              # 1x1 projection channels; flattened d=128*P*P
+topk: 13                   # teacher TaskAlignedAssigner, alpha=.5, beta=6
+schedule: constant         # constant or cosine loss-weight schedule
+
+# null counts training annotations; an explicit list follows dataset class-ID order.
+class_counts: null

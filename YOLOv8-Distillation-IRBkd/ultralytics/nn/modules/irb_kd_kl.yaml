@@ -1,0 +1,22 @@
+# Joint IRB-KD with KL boundary alignment.
+feature_distiller: irb-feature
+logic_distiller: irb-logit
+feature_layers:
+  - model.2.cv2
+  - model.4.cv2
+  - model.6.cv2
+  - model.8.cv2
+
+alpha: 0.00004
+beta: 0.8
+gamma: 0.00006
+relation_temperature: 0.5
+boundary_temperature: 0.4
+boundary_criterion: kl
+rho_top: 0.2
+rho_tail: 0.2
+roi_size: 7
+embed_dim: 128
+topk: 13
+schedule: constant
+class_counts: null

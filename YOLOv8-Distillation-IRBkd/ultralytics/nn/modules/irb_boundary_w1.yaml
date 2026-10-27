@@ -1,0 +1,11 @@
+# Detection supervision plus boundary distillation only.
+feature_distiller: null
+logic_distiller: irb-logit
+alpha: 0.0
+beta: 0.0
+gamma: 0.00006
+boundary_temperature: 0.4
+boundary_criterion: w1
+topk: 13
+schedule: constant
+class_counts: null
